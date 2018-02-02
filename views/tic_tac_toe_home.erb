@@ -1,0 +1,75 @@
+<% 
+
+
+%>
+<br>
+<h1>The Customer Ordered:</h1> <br>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+        margin-left:20%; 
+    margin-right:20%
+    color: black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<table>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+          <tr>
+    <td></td>
+    <td><button onclick="goBack()"><h3>Click Here to Change Order</button></h3></a></td>
+  
+    <td></td>
+  </tr>
+        <tr>
+    <td></td>
+    <td> <h2>Amount tendered</h2></td>
+    <td><form method="post" action="/payment">
+<h2> <input type="hidden" name="payment_amount" value= "X"> </h2>
+ 
+ <input type="submit" value=""></td>
+
+ </form></td>
+  </tr>
+</table>
+
+<html>
+<body>
+
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</body>
+</html> 
