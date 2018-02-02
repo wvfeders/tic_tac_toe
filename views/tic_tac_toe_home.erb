@@ -3,7 +3,9 @@
 
 %>
 <br>
-<h1>The Customer Ordered:</h1> <br>
+<br>
+<br>
+<br>
 <style>
 table {
     font-family: arial, sans-serif;
@@ -28,35 +30,61 @@ table, th, td {
     border: 1px solid black;
 }
 </style>
+
+<% 
+board_space = "<form method=""post"" action=""/play"">"
+board_spacea = "<input type=""hidden"" name=""square1"" value= ""X"">" 
+board_spaceb = "<input type=""submit"" value="">" 
+ %>
 <table>
 
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-          <tr>
-    <td></td>
-    <td><button onclick="goBack()"><h3>Click Here to Change Order</button></h3></a></td>
-  
-    <td></td>
-  </tr>
-        <tr>
-    <td></td>
-    <td> <h2>Amount tendered</h2></td>
-    <td><form method="post" action="/payment">
-<h2> <input type="hidden" name="payment_amount" value= "X"> </h2>
- 
+<tr>
+ <td> 
+ <%= board_space %> 
+ <%= board_spacea %>
+ <%= board_spaceb %>
+
+</td>
+    
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square2" value= "X"> </h2>
+ <input type="submit" value=""></td>
+   
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square3" value= "X"> </h2>
  <input type="submit" value=""></td>
 
- </form></td>
-  </tr>
+</tr>
+  
+<tr>
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square4" value= "X"> </h2>
+ <input type="submit" value=""></td>
+    
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square5" value= "X"> </h2>
+ <input type="submit" value=""></td>
+  
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square6" value= "X"> </h2>
+ <input type="submit" value=""></td>
+  
+</tr>
+  
+<tr>
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square7" value= "X"> </h2>
+ <input type="submit" value=""></td>
+    
+    <td> <form method="post" action="/play">
+<h2> <input type="hidden" name="square8" value= "X"> </h2>
+ <input type="submit" value=""></td>
+    
+    <td><form method="post" action="/play">
+<h2> <input type="hidden" name="square9" value= "X"> </h2>
+ <input type="submit" value=""></td>
+
+</tr>
 </table>
 
 <html>
