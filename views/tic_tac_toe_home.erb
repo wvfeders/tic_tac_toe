@@ -32,59 +32,77 @@ table, th, td {
 </style>
 
 <% 
-board_space = "<form method=""post"" action=""/play"">"
-board_spacea = "<input type=""hidden"" name=""square1"" value= ""X"">" 
-board_spaceb = "<input type=""submit"" value="">" 
+#board_space = ""
+board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
+board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
+board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
+board_space4 = "<form method=""post"" action=""/play""><input type=""text"" name=""square4"" size=""1"">"
+board_space5 = "<form method=""post"" action=""/play""><input type=""text"" name=""square5"" size=""1"">"
+board_space6 = "<form method=""post"" action=""/play""><input type=""text"" name=""square6"" size=""1"">"
+board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name=""square7"" size=""1"">"
+board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
+board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
+
+
  %>
+1 = <%= square1 %>
+2 = <%= square2 %>
+3 = <%= square3 %>
+4 = <%= square4 %>
+5 = <%= square5 %>
+6 = <%= square6 %>
+7 = <%= square7 %>
+8 = <%= square8 %>
+9 = <%= square9 %>
 <table>
 
 <tr>
- <td> 
- <%= board_space %> 
- <%= board_spacea %>
- <%= board_spaceb %>
+    <td> 
+        <%= board_space1 %>
+    </td>
 
-</td>
+    <td> 
+        <%= board_space2 %>
+    </td>    
     
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square2" value= "X"> </h2>
- <input type="submit" value=""></td>
-   
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square3" value= "X"> </h2>
- <input type="submit" value=""></td>
-
+    <td> 
+        <%= board_space3 %>
+    </td> 
 </tr>
-  
+
 <tr>
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square4" value= "X"> </h2>
- <input type="submit" value=""></td>
-    
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square5" value= "X"> </h2>
- <input type="submit" value=""></td>
-  
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square6" value= "X"> </h2>
- <input type="submit" value=""></td>
-  
-</tr>
-  
-<tr>
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square7" value= "X"> </h2>
- <input type="submit" value=""></td>
-    
-    <td> <form method="post" action="/play">
-<h2> <input type="hidden" name="square8" value= "X"> </h2>
- <input type="submit" value=""></td>
-    
-    <td><form method="post" action="/play">
-<h2> <input type="hidden" name="square9" value= "X"> </h2>
- <input type="submit" value=""></td>
+    <td> 
+        <%= board_space4 %>
+    </td>
 
+    <td> 
+        <%= board_space5 %>
+    </td>    
+    
+    <td> 
+        <%= board_space6 %>
+    </td> 
 </tr>
+
+<tr>
+    <td> 
+        <%= board_space7 %>
+    </td>
+
+    <td> 
+        <%= board_space8 %>
+    </td>    
+    
+    <td> 
+        <%= board_space9 %>
+    </td> 
+</tr>  
+
+<tr>
+    <td>
+       <input type="submit" value="Submit">
+    </td>
+</tr>    
 </table>
 
 <html>
