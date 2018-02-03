@@ -33,4 +33,5 @@ get '/board' do
 	square8 = params[:square8]
 	square9 = params[:square9]
 
-	erb :tic_tac_toe_home, :locals +> {:square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9}	
+	erb :tic_tac_toe_play, :locals => {:square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9}	
+end	

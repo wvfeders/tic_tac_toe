@@ -32,7 +32,6 @@ table, th, td {
 </style>
 
 <% 
-#board_space = ""
 board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
 board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
 board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
@@ -43,17 +42,10 @@ board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name
 board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
 board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
 
+ 
 
- %>
-1 = <%= square1 %>
-2 = <%= square2 %>
-3 = <%= square3 %>
-4 = <%= square4 %>
-5 = <%= square5 %>
-6 = <%= square6 %>
-7 = <%= square7 %>
-8 = <%= square8 %>
-9 = <%= square9 %>
+%>
+
 <table>
 
 <tr>
@@ -98,13 +90,10 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
     </td> 
 </tr>  
 
-<tr>
-    <td>
-       <input type="submit" value="Submit">
-    </td>
-</tr>    
+    
 </table>
 
+                                                        <input type="submit" value="Submit">
 <html>
 <body>
 

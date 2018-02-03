@@ -1,0 +1,197 @@
+
+<br>
+<br>
+<br>
+<br>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+        margin-left:20%; 
+    margin-right:20%
+    color: black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+<% 
+board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
+board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
+board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
+board_space4 = "<form method=""post"" action=""/play""><input type=""text"" name=""square4"" size=""1"">"
+board_space5 = "<form method=""post"" action=""/play""><input type=""text"" name=""square5"" size=""1"">"
+board_space6 = "<form method=""post"" action=""/play""><input type=""text"" name=""square6"" size=""1"">"
+board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name=""square7"" size=""1"">"
+board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
+board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
+
+if square1 == "X"
+  board_space1 = square1
+  board_space1a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = ""X"">"
+elsif square1 == "O"
+  board_space1 = square1
+  board_space1a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = ""O"">"    
+end 
+
+
+if square2 == "X"
+  board_space2 = square2
+  board_space2a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = ""X"">"
+elsif square2 == "O"
+  board_space2 = square2
+  board_space2a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = ""O"">"    
+end 
+
+if square3 == "X"
+  board_space3 = square3
+  board_space3a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = ""X"">"
+elsif square3 == "O"
+  board_space3 = square3
+  board_space3a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = ""O"">"    
+end 
+
+if square4 == "X"
+  board_space4 = square4
+  board_space4a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = ""X"">"
+elsif square4 == "O"
+  board_space4 = square4
+  board_space4a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = ""O"">"    
+end 
+
+if square5 == "X"
+  board_space5 = square5
+  board_space5a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = ""X"">"
+elsif square5 == "O"
+  board_space5 = square5
+  board_space5a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = ""O"">"    
+end 
+
+if square6 == "X"
+  board_space6 = square6
+  board_space6a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = ""X"">"
+elsif square6 == "O"
+  board_space6 = square6
+  board_space6a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = ""O"">"    
+end 
+
+if square7 == "X"
+  board_space7 = square7
+  board_space7a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = ""X"">"
+elsif square7 == "O"
+  board_space7 = square7
+  board_space7a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = ""O"">"    
+end 
+
+if square8 == "X"
+  board_space8 = square8
+  board_space8a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = ""X"">"
+elsif square8 == "O"
+  board_space8 = square8
+  board_space8a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = ""O"">"    
+end 
+
+if square9 == "X"
+  board_space9 = square9
+  board_space9a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = ""X"">"
+elsif square9 == "O"
+  board_space9 = square9
+  board_space9a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = ""O"">"    
+end 
+
+ %>
+1 = <%= square1 %>
+2 = <%= square2 %>
+3 = <%= square3 %>
+4 = <%= square4 %>
+5 = <%= square5 %>
+6 = <%= square6 %>
+7 = <%= square7 %>
+8 = <%= square8 %>
+9 = <%= square9 %>
+<table>
+
+<tr>
+    <td> 
+        <%= board_space1 %>
+        <%= board_space1a %> 
+    </td>
+
+    <td> 
+        <%= board_space2 %>
+        <%= board_space2a %> 
+    </td>    
+    
+    <td> 
+        <%= board_space3 %>
+        <%= board_space3a %> 
+    </td> 
+</tr>
+
+<tr>
+    <td> 
+        <%= board_space4 %>
+        <%= board_space4a %> 
+    </td>
+
+    <td> 
+        <%= board_space5 %>
+        <%= board_space5a %> 
+
+    </td>    
+    
+    <td> 
+        <%= board_space6 %>
+        <%= board_space6a %>
+ 
+    </td> 
+</tr>
+
+<tr>
+    <td> 
+        <%= board_space7 %>
+        <%= board_space7a %>
+
+    </td>
+
+    <td> 
+        <%= board_space8 %>
+        <%= board_space8a %>
+    </td>    
+    
+    <td> 
+        <%= board_space9 %>
+        <%= board_space9a %>
+    </td> 
+</tr>  
+
+   
+</table>
+ <input type="submit" value="Submit">
+<html>
+<body>
+
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</body>
+</html> 
