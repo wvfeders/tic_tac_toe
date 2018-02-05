@@ -1,4 +1,4 @@
-
+<%= a_winner %>
 <br>
 <br>
 <br>
@@ -39,76 +39,76 @@ board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name
 board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
 board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
 
-if square1 == "X"
-  board_space1 = square1
+if square1.upcase == "X"
+  board_space1 = square1.upcase
   board_space1a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = ""X"">"
-elsif square1 == "O"
-  board_space1 = square1
+elsif square1.upcase == "O"
+  board_space1 = square1.upcase
   board_space1a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = ""O"">"    
 end 
 
 
-if square2 == "X"
-  board_space2 = square2
+if square2.upcase == "X"
+  board_space2 = square2.upcase
   board_space2a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = ""X"">"
-elsif square2 == "O"
-  board_space2 = square2
+elsif square2.upcase == "O"
+  board_space2 = square2.upcase
   board_space2a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = ""O"">"    
 end 
 
-if square3 == "X"
-  board_space3 = square3
+if square3.upcase == "X"
+  board_space3 = square3.upcase
   board_space3a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = ""X"">"
-elsif square3 == "O"
-  board_space3 = square3
+elsif square3.upcase == "O"
+  board_space3 = square3.upcase
   board_space3a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = ""O"">"    
 end 
 
-if square4 == "X"
-  board_space4 = square4
+if square4.upcase == "X"
+  board_space4 = square4.upcase
   board_space4a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = ""X"">"
-elsif square4 == "O"
-  board_space4 = square4
+elsif square4.upcase == "O"
+  board_space4 = square4.upcase
   board_space4a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = ""O"">"    
 end 
 
-if square5 == "X"
-  board_space5 = square5
+if square5.upcase == "X"
+  board_space5 = square5.upcase
   board_space5a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = ""X"">"
-elsif square5 == "O"
-  board_space5 = square5
+elsif square5.upcase == "O"
+  board_space5 = square5.upcase
   board_space5a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = ""O"">"    
 end 
 
-if square6 == "X"
-  board_space6 = square6
+if square6.upcase == "X"
+  board_space6 = square6.upcase
   board_space6a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = ""X"">"
-elsif square6 == "O"
-  board_space6 = square6
+elsif square6.upcase == "O"
+  board_space6 = square6.upcase
   board_space6a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = ""O"">"    
 end 
 
-if square7 == "X"
-  board_space7 = square7
+if square7.upcase == "X"
+  board_space7 = square7.upcase
   board_space7a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = ""X"">"
-elsif square7 == "O"
-  board_space7 = square7
+elsif square7.upcase == "O"
+  board_space7 = square7.upcase
   board_space7a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = ""O"">"    
 end 
 
-if square8 == "X"
-  board_space8 = square8
+if square8.upcase == "X"
+  board_space8 = square8.upcase
   board_space8a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = ""X"">"
-elsif square8 == "O"
-  board_space8 = square8
+elsif square8.upcase == "O"
+  board_space8 = square8.upcase
   board_space8a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = ""O"">"    
 end 
 
-if square9 == "X"
-  board_space9 = square9
+if square9.upcase == "X"
+  board_space9 = square9.upcase
   board_space9a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = ""X"">"
-elsif square9 == "O"
-  board_space9 = square9
+elsif square9.upcase == "O"
+  board_space9 = square9.upcase
   board_space9a = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = ""O"">"   
 end 
 
@@ -184,7 +184,7 @@ end
 <html>
 <body>
 
-
+<%= $result %>
 
 <script>
 function goBack() {

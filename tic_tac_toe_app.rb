@@ -16,25 +16,7 @@ post '/play' do
 	square7 = params[:square7]
 	square8 = params[:square8]
 	square9 = params[:square9]
-	if plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square1"
-		square1 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square2"
-		square2 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square3"
-		square3 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square4"
-		square4 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square5"
-		square5 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square6"
-		square6 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square7"
-		square7 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square8"
-		square8 = "O"
-	elsif plays(square1,square2,square3,square4,square5,square5,square7,square8,square9) == "square9"
-		square9 = "O"
-	end		
+		
 
 
 
@@ -55,5 +37,26 @@ get '/board' do
 	square8 = params[:square8]
 	square9 = params[:square9]
 
-	erb :tic_tac_toe_play, :locals => {:square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9}	
+square_pick = plays(square1,square2,square3,square4,square5,square5,square7,square8,square9)
+	if square_pick == "square1"
+		square1 = "O"
+	elsif square_pick == "square2"
+		square2 = "O"
+	elsif square_pick == "square3"
+		square3 = "O"
+	elsif square_pick == "square4"
+		square4 = "O"
+	elsif square_pick == "square5"
+		square5 = "O"
+	elsif square_pick == "square6"
+		square6 = "O"
+	elsif square_pick == "square7"
+		square7 = "O"
+	elsif square_pick == "square8"
+		square8 = "O"
+	elsif square_pick == "square9"
+		square9 = "O"
+	end	
+a_winner = winners(square1,square2,square3,square4,square5,square5,square7,square8,square9)
+	erb :tic_tac_toe_play, :locals => {:square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9, :a_winner => a_winner}	
 end	
