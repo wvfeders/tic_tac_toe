@@ -1,6 +1,10 @@
 Welcome to Jim's Tic Tac Toe Game <br>
 You will be playing X's, the computer will play O's <br>
 To start the game select a square, type an X and hit return. <br>
+
+Select whether to set the computer to an "easy" or "difficult" opponent<br>
+
+
 To let the computer go first click the button below
 
 <br>
@@ -94,7 +98,15 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
     
 </table>
 
+<form>
+  <input type="checkbox" action="/play" name="opponent" value="Easy"> Easy<br>
+  <input type="checkbox" action="/play" name="opponent" value="Difficult"> Difficult<br> 
+
+
+
+
 <input type="submit" value="Click here to let the computer make the first play">
+</form>
 <html>
 <body>
 

@@ -27,8 +27,13 @@ table, th, td {
     border: 1px solid black;
 }
 </style>
-
+<form>
+<input type = "hidden" action="/play" name="opponent" value= <%= opponent%>>
+</form>
 <% 
+
+opponent = opponent
+
 board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
 board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
 board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
@@ -187,7 +192,7 @@ end
    
 </table>
 
-
+<input type = "hidden" action="/play" name="opponent" value= <%= opponent%>>
  <input type="submit" value="">
 
 <html>

@@ -1,4 +1,4 @@
-def plays(a,b,c,d,e,f,g,h,i) #this function randomly selects a square from the remaining empty squares
+def plays_random(a,b,c,d,e,f,g,h,i) #this function randomly selects a square from the remaining empty squares
 	all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
 	all_squares = [1,2,3,4,5,6,7,8,9]
 	taken_squares = [] #initiates an array that will contain untaken squares
@@ -42,4 +42,21 @@ def winners(a,b,c,d,e,f,g,h,i)
 	return $result	
 end
 
-#puts winners("O","c","X","X","d","X","O","a","O")	
+def plays_ai(a,b,c,d,e,f,g,h,i)
+		all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
+	all_squares = [1,2,3,4,5,6,7,8,9]
+	taken_squares = [] #initiates an array that will contain untaken squares
+	# (1..9).each do |i|
+	# 	if all_hash[i] != "" #if a square is taken then itiis pushed into the taken_squares aray
+	# 		taken_squares.push(i)
+	# 	end
+	# end
+	if all_hash[5] == ""
+		ai_pick = 5.to_s 	
+	end	
+	a = "square"
+	 out = a<<ai_pick #"out" concatenates the square number, for example "1", with the word "square" to make "square1" which is returned from the function	
+	return out
+end
+
+puts plays_ai("O","c","X","X","","X","O","a","O")	
