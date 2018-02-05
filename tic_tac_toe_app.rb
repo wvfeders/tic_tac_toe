@@ -20,10 +20,10 @@ post '/play' do
 
 
 
-	puts square1, square2,square3,square4,square4,square5,square6,square7,square8,square9
+	#puts square1, square2,square3,square4,square4,square5,square6,square7,square8,square9
 	
 
- redirect 'board?square1=' + square1 + '&square2=' + square2 + '&square3=' + square3 + '&square4=' + square4 + '&square5=' + square5 + '&square6=' + square6 + '&square7=' + square7 + '&square8=' + square8 + '&square9=' + square9
+ redirect 'board?square1=' + square1.upcase + '&square2=' + square2.upcase + '&square3=' + square3.upcase + '&square4=' + square4.upcase + '&square5=' + square5.upcase + '&square6=' + square6.upcase + '&square7=' + square7.upcase + '&square8=' + square8.upcase + '&square9=' + square9.upcase
 end
 
 get '/board' do
@@ -37,7 +37,7 @@ get '/board' do
 	square8 = params[:square8]
 	square9 = params[:square9]
 
-square_pick = plays(square1,square2,square3,square4,square5,square5,square7,square8,square9)
+square_pick = plays(square1,square2,square3,square4,square5,square6,square7,square8,square9)
 	if square_pick == "square1"
 		square1 = "O"
 	elsif square_pick == "square2"
@@ -57,6 +57,7 @@ square_pick = plays(square1,square2,square3,square4,square5,square5,square7,squa
 	elsif square_pick == "square9"
 		square9 = "O"
 	end	
-a_winner = winners(square1,square2,square3,square4,square5,square5,square7,square8,square9)
+a_winner = winners(square1,square2,square3,square4,square5,square6,square7,square8,square9)
+puts a_winner
 	erb :tic_tac_toe_play, :locals => {:square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9, :a_winner => a_winner}	
 end	
