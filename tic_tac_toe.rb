@@ -45,7 +45,35 @@ end
 def plays_ai(a,b,c,d,e,f,g,h,i)
 		all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
 	all_squares = [1,2,3,4,5,6,7,8,9]
-	taken_squares = [] #initiates an array that will contain untaken squares
+	taken_squares = [] 
+	win1 = {1 => a, 2 => b, 3 => c}
+	win2 = {4 => d, 5 => e, 6 => f}
+	win3 = {7 => g, 8 => h, 9 => i}
+	win4 = {1 => a, 4 => d, 7 => g}
+	win5 = {1 => a, 5 => e, 9 => i}
+	win6 = {3 => c, 5 => e, 7 => g}
+	win7 = {2 => b, 5 => e, 9 => h}
+	win8 = {4 => d, 5 => e, 5 => f}
+
+	win_squares = [win1,win2,win3,win3,win4,win5,win6,win7,win8]
+	(0..8).each do |i|
+		three = win_squares[i] #if a square is taken then itiis pushed into the taken_squares aray
+		#print i, plays
+	#	blanks = x_num.key("")   #=> "b"
+		x_num = three.select {|k,v| v == "X"} 
+		o_num = three.select {|k,v| v == "O"}
+		no_num = three.select {|k,v| v == ""}
+		if x_num.length == 2 
+			if o_num.length < 1
+				ai_pick =  no_num.key("")
+
+			end	
+		end 	# 	
+print ai_pick
+
+
+	end
+	#initiates an array that will contain untaken squares
 	# (1..9).each do |i|
 	# 	if all_hash[i] != "" #if a square is taken then itiis pushed into the taken_squares aray
 	# 		taken_squares.push(i)
@@ -59,4 +87,4 @@ def plays_ai(a,b,c,d,e,f,g,h,i)
 	return out
 end
 
-puts plays_ai("O","c","X","X","","X","O","a","O")	
+puts plays_ai("X","X","O","X","","X","","O","O")	
