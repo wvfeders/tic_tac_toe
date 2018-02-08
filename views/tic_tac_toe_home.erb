@@ -8,37 +8,8 @@ To play the game, select a square, type an X, and hit return. <br>
 
 To let the computer go first, click the button below </h2>
 
-
 <br>
-<!-- <style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-        margin-left:20%; 
-    margin-right:20%
-    color: black;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-    color: black;
-        height: 125px;
-    font-size: 200%;
-    background-color: #dddddd;
-
-}
-
-tr:nth-child(even) {
-    background-color: red;
-}
-table, th, td {
-    border: 1px solid black;
-}
-</style> -->
-
+<!-- #the following lines define the forms that are disolayed in the table below -->
 <% 
 board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
 board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
@@ -49,16 +20,9 @@ board_space6 = "<form method=""post"" action=""/play""><input type=""text"" name
 board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name=""square7"" size=""1"">"
 board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
 board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
-
- 
-
 %>
 
-<table>
-
-    <col width="150">
-    <col width="150">
-    <col width="150">
+<table> <!-- Creates table to accept the plays -->
 
 <tr>
     <td> 
@@ -105,15 +69,11 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
     
 </table>
 <h1>
-<form>
-   <input type = "hidden" action="/play" name="opponent" value= "not_chosen"> 
-  <input type="checkbox" action="/play" name="opponent" value="Easy"> Easy<br>
-  <input type="checkbox" action="/play" name="opponent" value="Difficult"> Difficult<br> 
-
-
-
-
-<input type="submit" value="Click here to let the computer make the first play">
+<form> <!-- This forms sends "not chosen" unless one of the other two options are checked -->
+    <input type = "hidden" action="/play" name="opponent" value= "not_chosen"> 
+    <input type="checkbox" action="/play" name="opponent" value="Easy"> Easy<br>
+    <input type="checkbox" action="/play" name="opponent" value="Difficult"> Difficult<br> 
+    <input type="submit" value="Click here to let the computer make the first play">
 </form>
 <br>
 </h1>
@@ -125,11 +85,7 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
 <p id="date"> </p>
 <script>
     window.onload=getOrderDate('date');
-// function goBack() {
-//     window.history.back();
-// }
 </script>
-
 
 </body>
 </html> 

@@ -52,7 +52,7 @@ def plays_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the square p
 	win7 = {2 => b, 5 => e, 8 => h}
 	win8 = {3 => c, 6 => f, 9 => i}
 
-#The following is a cascade of commands that selects the square $ai_pick to be played. The value of $ai_pick may be overwritten as the prgam peoceeds throught the code as the criticality of placement increases as the program progresses
+#The following is a cascade of commands that selects the square $ai_pick to be played. The value of $ai_pick may be overwritten as the program proceeds through the code as the criticality of placement increases as the program progresses
 	middle_sides = {2 => b, 4 =>d, 6 => f, 8 => h} #this code selects an empty middle side location
 	middle_sides.each do | key , value |
 		if value == ""
@@ -95,7 +95,7 @@ def plays_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the square p
 		end			 	
 	end
 
-	if all_hash[5] == "" #This selects the midle square if it is open . Thids is always the first play for 							O if it is available
+	if all_hash[5] == "" #This selects the midle square if it is open . This is always the first play for 							O if it is available
 		$ai_pick = 5.to_s 	
 	end	
 
@@ -111,4 +111,3 @@ def plays_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the square p
 	return out
 end
 
-# plays_ai("","X","O","X","X","X","X","O","O")	
