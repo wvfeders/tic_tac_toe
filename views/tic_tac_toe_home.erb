@@ -1,16 +1,16 @@
-Welcome to Jim's Tic Tac Toe Game <br>
-You will be playing X's, the computer will play O's <br>
-Select whether to set the computer as an "Easy" or "Difficult" opponent in the check box below<br>
 
-To play the game select a square, type an X and hit return. <br>
 
-To let the computer go first click the button below
+<h1>Welcome to Jim's Tic Tac Toe Game </h1> 
+<h2>You will be playing X's, the computer will play O's <br>
+Select whether to set the computer as an "Easy" or "Difficult" opponent in the check boxes below<br>
+
+To play the game, select a square, type an X, and hit return. <br>
+
+To let the computer go first, click the button below </h2>
+
 
 <br>
-<br>
-<br>
-<br>
-<style>
+<!-- <style>
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -25,15 +25,19 @@ td, th {
     text-align: center;
     padding: 8px;
     color: black;
+        height: 125px;
+    font-size: 200%;
+    background-color: #dddddd;
+
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: red;
 }
 table, th, td {
     border: 1px solid black;
 }
-</style>
+</style> -->
 
 <% 
 board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
@@ -51,6 +55,10 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
 %>
 
 <table>
+
+    <col width="150">
+    <col width="150">
+    <col width="150">
 
 <tr>
     <td> 
@@ -96,8 +104,9 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
 
     
 </table>
-
+<h1>
 <form>
+   <input type = "hidden" action="/play" name="opponent" value= "not_chosen"> 
   <input type="checkbox" action="/play" name="opponent" value="Easy"> Easy<br>
   <input type="checkbox" action="/play" name="opponent" value="Difficult"> Difficult<br> 
 
@@ -106,15 +115,19 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name
 
 <input type="submit" value="Click here to let the computer make the first play">
 </form>
+<br>
+</h1>
+ 
 <html>
 <body>
-
-
-
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
 <script>
-function goBack() {
-    window.history.back();
-}
+    window.onload=getOrderDate('date');
+// function goBack() {
+//     window.history.back();
+// }
 </script>
 
 

@@ -1,32 +1,12 @@
-<%= a_winner %>
+<br>
+<h1>
+  <%= a_winner %>
+</h1>
 <br>
 <br>
 <br>
 <br>
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-        margin-left:20%; 
-    margin-right:20%
-    color: black;
-}
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-    color: black;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-table, th, td {
-    border: 1px solid black;
-}
-</style>
 <form>
 <input type = "hidden" action="/play" name="opponent" value= <%= opponent%>>
 </form>
@@ -118,15 +98,7 @@ elsif square9.upcase == "O"
 end 
 
  %>
-1 = <%= square1 %>
-2 = <%= square2 %>
-3 = <%= square3 %>
-4 = <%= square4 %>
-5 = <%= square5 %>
-6 = <%= square6 %>
-7 = <%= square7 %>
-8 = <%= square8 %>
-9 = <%= square9 %>
+
 <table>
 
 <tr>
@@ -197,15 +169,15 @@ end
 
 <html>
 <body>
-
+<script src= "/js/getdate.js"> 
+</script>
+<p id="date"> </p>
 <br><br>
 <input type="button" onclick="location.href='http://localhost:4567';" value="Click Here To Start a New Game" >
 
 
 <script>
-function goBack() {
-    window.history.back();
-}
+window.onload=getOrderDate('date');
 </script>
 
 

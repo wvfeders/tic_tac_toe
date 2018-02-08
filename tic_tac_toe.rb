@@ -1,3 +1,5 @@
+
+
 def plays_random(a,b,c,d,e,f,g,h,i) #this function randomly selects a square from the remaining empty squares for the next "O" play. It takes in contents of all 9 squares (a through i) as input.
 	all_hash = {1 => a, 2 => b, 3 => c, 4 => d, 5 => e, 6 => f, 7 => g, 8 => h, 9 => i}
 	all_squares = [1,2,3,4,5,6,7,8,9]
@@ -28,7 +30,7 @@ def winners(a,b,c,d,e,f,g,h,i) #this function identifies the winning combination
 				$result = "Congratulations X's have won"
 				break
 			elsif plays == o_wins
-				$result = "Congratulations O's have won"
+				$result = "The O's have won. Please try again"  
 				break
 			else
 				$result = "No winner yet, keep playing"
@@ -66,8 +68,8 @@ def plays_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the square p
 	end		
 
 #this section checks to see if 2 X's are in row with a blank and then selects the blank square for the next play to block the X's from winning
-	win_squares = [win1,win2,win3,win3,win4,win5,win6,win7,win8]
-	(0..8).each do |i|							
+	win_squares = [win1,win2,win3,win4,win5,win6,win7,win8]
+	(0..7).each do |i|							
 		three = win_squares[i] 
 		x_num = three.select {|k,v| v == "X"} 
 		o_num = three.select {|k,v| v == "O"}
@@ -81,7 +83,7 @@ def plays_ai(a,b,c,d,e,f,g,h,i) #this function uses logic to select the square p
 
 #this section checks to see if 2 O's are in a row with a blank and then selects the blank square for the next play to win the game
 
-	(0..8).each do |i|
+	(0..7).each do |i|
 		three = win_squares[i] 
 		x_num = three.select {|k,v| v == "X"} 
 		o_num = three.select {|k,v| v == "O"}

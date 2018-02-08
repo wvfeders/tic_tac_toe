@@ -1,0 +1,35 @@
+body {
+	background-color: lightgreen;
+	color: black;
+	/*background-image: url(/../images/names.jpg);*/
+	
+	font-size: 10px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+        margin-left:20%; 
+    margin-right:20%
+    color: black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    height: 120px;
+    font-size: 300%;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table, th, td {
+    border: 1px solid black;
+}
