@@ -2,24 +2,24 @@
 
 <h1>Welcome to Jim's Tic Tac Toe Game </h1> 
 <h2>You will be playing X's, the computer will play O's <br>
-Select whether to set the computer as an "Easy" or "Difficult" opponent in the check boxes below<br>
+First, set the computer as an "Easy" or "Difficult" opponent in the check boxes below<br>
 
-To play the game, select a square, type an X, and hit return. <br>
+Then, click inside a box where you wish to place an X, and press ENTER on your keyboard. <br>
 
-To let the computer go first, click the button below </h2>
+NOTE: You may make the first play or let the computer go first by clicking the button below </h2>
 
 <br>
 <!-- #the following lines define the forms that are disolayed in the table below -->
 <% 
-board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
-board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
-board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
-board_space4 = "<form method=""post"" action=""/play""><input type=""text"" name=""square4"" size=""1"">"
-board_space5 = "<form method=""post"" action=""/play""><input type=""text"" name=""square5"" size=""1"">"
-board_space6 = "<form method=""post"" action=""/play""><input type=""text"" name=""square6"" size=""1"">"
-board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name=""square7"" size=""1"">"
-board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
-board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
+board_space1 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = """"><input type=""checkbox"" name=""square1"" value=""X"">" 
+board_space2 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = """"><input type=""checkbox"" name=""square2"" value=""X"">"
+board_space3 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = """"><input type=""checkbox"" name=""square3"" value=""X"">"
+board_space4 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = """"><input type=""checkbox"" name=""square4"" value=""X"">"
+board_space5 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = """"><input type=""checkbox"" name=""square5"" value=""X"">"
+board_space6 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = """"><input type=""checkbox"" name=""square6"" value=""X"">"
+board_space7 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = """"><input type=""checkbox"" name=""square7"" value=""X"">"
+board_space8 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = """"><input type=""checkbox"" name=""square8"" value=""X"">"
+board_space9 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = """"><input type=""checkbox"" name=""square9"" value=""X"">"
 %>
 
 <table> <!-- Creates table to accept the plays -->

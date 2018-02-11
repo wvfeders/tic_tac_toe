@@ -14,16 +14,15 @@
 
 # opponent = opponent
 
-board_space1 = "<form method=""post"" action=""/play""><input type=""text"" name=""square1"" size=""1"">" 
-board_space2 = "<form method=""post"" action=""/play""><input type=""text"" name=""square2"" size=""1"">"
-board_space3 = "<form method=""post"" action=""/play""><input type=""text"" name=""square3"" size=""1"">"
-board_space4 = "<form method=""post"" action=""/play""><input type=""text"" name=""square4"" size=""1"">"
-board_space5 = "<form method=""post"" action=""/play""><input type=""text"" name=""square5"" size=""1"">"
-board_space6 = "<form method=""post"" action=""/play""><input type=""text"" name=""square6"" size=""1"">"
-board_space7 = "<form method=""post"" action=""/play""><input type=""text"" name=""square7"" size=""1"">"
-board_space8 = "<form method=""post"" action=""/play""><input type=""text"" name=""square8"" size=""1"">"
-board_space9 = "<form method=""post"" action=""/play""><input type=""text"" name=""square9"" size=""1"">"
-
+board_space1 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square1"" value = """"><input type=""checkbox"" name=""square1"" value=""X"">" 
+board_space2 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square2"" value = """"><input type=""checkbox"" name=""square2"" value=""X"">"
+board_space3 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square3"" value = """"><input type=""checkbox"" name=""square3"" value=""X"">"
+board_space4 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square4"" value = """"><input type=""checkbox"" name=""square4"" value=""X"">"
+board_space5 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square5"" value = """"><input type=""checkbox"" name=""square5"" value=""X"">"
+board_space6 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square6"" value = """"><input type=""checkbox"" name=""square6"" value=""X"">"
+board_space7 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square7"" value = """"><input type=""checkbox"" name=""square7"" value=""X"">"
+board_space8 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square8"" value = """"><input type=""checkbox"" name=""square8"" value=""X"">"
+board_space9 = "<form method=""post"" action=""/play""><input type=""hidden"" name=""square9"" value = """"><input type=""checkbox"" name=""square9"" value=""X"">"
 
 #The following commands redefines the contents of any moves that have been made and sends the moves back to /play as a hidden values 
 if square1.upcase == "X"
