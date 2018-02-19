@@ -2,9 +2,10 @@
 
 <h1>Welcome to Jim's Tic Tac Toe Game </h1> 
 <h2>You will be playing X's, the computer will play O's <br>
-First, set the computer as an "Easy" or "Difficult" opponent in the check boxes below<br>
+In default mode, the computer is an 'Easy' opponent.<br>
+For a real challenge, set the computer to play as a "Difficult" opponent by clicking the check box below the playing board.<br>
 
-Then, click an 'x' box where you wish to make a play. <br>
+Click an 'x' box where you wish to make a play. <br>
 
 NOTE: You may make the first play or let the computer go first by clicking the button below </h2>
 
@@ -70,8 +71,8 @@ board_space9 = "<form method=""post"" action=""/play""><input type=""hidden"" na
 </table>
 <h1>
 <form> <!-- This forms sends "not chosen" unless one of the other two options are checked -->
-    <input type = "hidden" action="/play" name="opponent" value= "not_chosen"> 
-    <input type="checkbox" action="/play" name="opponent" value="Easy"> Easy<br>
+ <!--    <input type = "hidden" action="/play" name="opponent" value= "not_chosen">  -->
+    <input type="hidden" action="/play" name="opponent" value="Easy"> 
     <input type="checkbox" action="/play" name="opponent" value="Difficult"> Difficult<br> 
     <input type="submit" value="Click here to let the computer make the first play">
 </form>

@@ -1,5 +1,6 @@
 require "sinatra"
-
+require_relative 'playrandom.rb'
+require_relative 'playai.rb'
 require_relative "tic_tac_toe.rb"
 
 
@@ -34,13 +35,12 @@ get '/board' do
 	square8 = params[:square8]
 	square9 = params[:square9]
 
-	if opponent == "Easy"
-		square_pick = plays_random(square1,square2,square3,square4,square5,square6,square7,square8,square9)
-	elsif opponent == "Difficult"
-		square_pick = plays_ai(square1,square2,square3,square4,square5,square6,square7,square8,square9)
-	elsif opponent == "not_chosen"
-		square_pick = ""
-	end
+
+	opponent = Object.const_get(opponent) #object.const_get redefines opponent so it can be used to call an Easy or Difficult class
+	
+	o_move = opponent.new(square1,square2,square3,square4,square5,square6,square7,square8,square9) #creates a new instance of either Easy or Difficult depedning on the value of opponent
+	square_pick = o_move.plays #calls the plays function in the Easy or Difficult class
+
 	
 	#a_winner is evaluated after the 'X' has been played
 	a_winner = winners(square1,square2,square3,square4,square5,square6,square7,square8,square9)
@@ -69,9 +69,7 @@ get '/board' do
 	#a_winner is reevaluated after the 'O' has been played
 	a_winner = winners(square1,square2,square3,square4,square5,square6,square7,square8,square9)
 
-	if opponent == "not_chosen" #If the player failed to select a difficulty level, he is directed to a separate erb for instructions
-		erb :choose_difficulty
-	else		
+	
 		erb :tic_tac_toe_play, :locals => {:opponent => opponent, :square1 => square1, :square2 => square2, :square3 => square3, :square4 => square4, :square5 => square5, :square6 => square6, :square7 => square7, :square8 => square8, :square9 => square9, :a_winner => a_winner}	
-	end
+
 end	
